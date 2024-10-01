@@ -1,0 +1,197 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .logo img {
+    margin-left: 140px;
+    width: 105px;
+    height: auto;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin: 0 15px;
+
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #565656;
+   font-size: 0.7em;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #008cff;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px;
+}
+
+/* Main section */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.landing img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+h6 {
+    font-size: 2rem;
+    color:#4a4a4a;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #008cff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* Aside section */
+aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #ffffff;
+}
+
+aside .content {
+    width: 60%;
+    text-align: left;
+}
+
+aside .content h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: lighter;
+
+}
+
+aside .content h2{
+    color: rgb(74, 74, 74);
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+aside .content p {
+    color: grey;
+    margin-bottom: 20px;
+    font-size: 0.7em;
+}
+
+aside img {
+    width: 55%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f4f4f4;
+    color: grey;
+    font-size: 10px;
+    line-height: 1.4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    header ul.active {
+        display: flex;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    aside .content, aside img {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
